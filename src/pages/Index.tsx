@@ -312,6 +312,41 @@ const Index = () => {
           </CardContent>
         </Card>
 
+        {/* Flowers & Gifts Section */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {/* Flowers */}
+          <Card className="animate-fade-in border-wedding-pink/20 shadow-lg">
+            <CardHeader className="bg-wedding-pink/10">
+              <CardTitle className="font-cormorant text-2xl text-wedding-pink flex items-center gap-2">
+                <Icon name="Flower" size={24} />
+                О цветах
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="p-6">
+              <p className="font-open-sans text-gray-700 leading-relaxed">
+                Просим не обременять себя выбором цветов, 
+                <span className="font-semibold text-wedding-pink"> Ваше присутствие скрасит этот день ярче любых букетов!</span>
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* Gifts */}
+          <Card className="animate-fade-in border-wedding-gold/30 shadow-lg">
+            <CardHeader className="bg-wedding-gold/10">
+              <CardTitle className="font-cormorant text-2xl text-gray-800 flex items-center gap-2">
+                <Icon name="Gift" size={24} />
+                О подарках
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="p-6">
+              <p className="font-open-sans text-gray-700 leading-relaxed">
+                Если хотите подарить нам ценный и нужный подарок, 
+                <span className="font-semibold text-wedding-gold"> мы будем очень благодарны за вклад в бюджет нашей молодой семьи.</span>
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
         {/* RSVP Form */}
         <Card className="animate-fade-in border-wedding-blue/20 shadow-xl">
           <CardHeader className="bg-gradient-to-r from-wedding-blue/10 to-wedding-pink/10">
@@ -393,7 +428,7 @@ const Index = () => {
 
               {/* Food preference */}
               <div>
-                <Label className="font-open-sans font-medium text-base">К какому блюду из основного меню вы бы хотели получить приглашение?</Label>
+                <Label className="font-open-sans font-medium text-base">Что вы предпочитаете на второе?</Label>
                 <RadioGroup
                   value={formData.food}
                   onValueChange={(value) => setFormData({...formData, food: value})}
