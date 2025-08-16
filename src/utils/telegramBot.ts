@@ -11,7 +11,7 @@ interface RSVPData {
 export const sendToTelegram = async (formData: RSVPData): Promise<boolean> => {
   // Замените на ваши реальные данные
   const BOT_TOKEN = '8269231695:AAELEbX34FJM8gLy68-cNUUx6PSHNNptr5A'; // Получите от @BotFather
-  const CHAT_ID = '1002901823317'; // ID чата или канала
+  const CHAT_ID = '-1002901823317'; // ID чата или канала
   
   const message = `🎉 НОВОЕ ПОДТВЕРЖДЕНИЕ НА СВАДЬБУ 🎉
 
