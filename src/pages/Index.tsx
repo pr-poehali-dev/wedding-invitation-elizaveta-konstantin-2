@@ -164,7 +164,7 @@ const Index = () => {
                 
                 <div className="space-y-3">
                   <Button 
-                    onClick={() => window.open('https://yandex.ru/maps/?text=44.4567,37.8234&z=16', '_blank')}
+                    onClick={() => window.open('https://yandex.ru/maps/?text=44.684685,37.564024&z=16', '_blank')}
                     className="w-full bg-wedding-pink hover:bg-wedding-pink/90 text-white font-open-sans"
                   >
                     <Icon name="Navigation" className="mr-2" size={16} />
@@ -172,7 +172,7 @@ const Index = () => {
                   </Button>
                   
                   <Button 
-                    onClick={() => window.open('https://maps.google.com/?q=44.4567,37.8234', '_blank')}
+                    onClick={() => window.open('https://maps.google.com/?q=44.684685,37.564024', '_blank')}
                     variant="outline"
                     className="w-full border-wedding-pink text-wedding-pink hover:bg-wedding-pink/10 font-open-sans"
                   >
@@ -199,7 +199,7 @@ const Index = () => {
               <div className="space-y-4">
                 <div className="relative w-full h-80 rounded-xl overflow-hidden shadow-lg">
                   <iframe
-                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A44.456700%2C37.823400&amp;source=constructor"
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A44.684685%2C37.564024&amp;source=constructor"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -210,7 +210,7 @@ const Index = () => {
                 
                 <div className="grid grid-cols-2 gap-3">
                   <Button 
-                    onClick={() => window.open('https://yandex.ru/maps/?text=44.4567,37.8234&z=16', '_blank')}
+                    onClick={() => window.open('https://yandex.ru/maps/?text=44.684685,37.564024&z=16', '_blank')}
                     className="bg-wedding-blue hover:bg-wedding-blue/90 text-white font-open-sans"
                   >
                     <Icon name="Navigation" className="mr-2" size={16} />
@@ -218,7 +218,7 @@ const Index = () => {
                   </Button>
                   
                   <Button 
-                    onClick={() => window.open('https://maps.google.com/?q=44.4567,37.8234', '_blank')}
+                    onClick={() => window.open('https://maps.google.com/?q=44.684685,37.564024', '_blank')}
                     variant="outline"
                     className="border-wedding-pink text-wedding-pink hover:bg-wedding-pink/10 font-open-sans"
                   >
@@ -266,8 +266,8 @@ const Index = () => {
                           <h4 className="font-open-sans font-semibold text-gray-800">Нужна помощь?</h4>
                           <p className="font-open-sans text-sm text-gray-600 mt-1">
                             Если потерялись или нужна помощь с дорогой:<br />
-                            Елизавета: <span className="font-medium">8 964 898-98-66</span><br />
-                            Константин: <span className="font-medium">+7 961 519-16-51</span>
+                            Елизавета: <span className="font-medium">+7 (964) 898-98-66</span><br />
+                            Константин: <span className="font-medium">+7 (961) 519-16-51</span>
                           </p>
                         </div>
                       </div>
@@ -557,8 +557,8 @@ const Index = () => {
                 <div className="flex justify-center items-center gap-2">
                   <Icon name="Phone" size={18} />
                   <span className="font-open-sans font-medium">Елизавета:</span>
-                  <a href="tel:89648989866" className="font-open-sans text-wedding-blue hover:underline">
-                    8 964 898-98-66
+                  <a href="tel:+79648989866" className="font-open-sans text-wedding-blue hover:underline">
+                    +7 (964) 898-98-66
                   </a>
                 </div>
                 
@@ -566,7 +566,7 @@ const Index = () => {
                   <Icon name="Phone" size={18} />
                   <span className="font-open-sans font-medium">Константин:</span>
                   <a href="tel:+79615191651" className="font-open-sans text-wedding-blue hover:underline">
-                    +7 961 519-16-51
+                    +7 (961) 519-16-51
                   </a>
                 </div>
               </div>
