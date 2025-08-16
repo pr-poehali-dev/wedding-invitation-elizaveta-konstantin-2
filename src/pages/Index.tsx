@@ -252,7 +252,7 @@ const Index = () => {
                         <div>
                           <h4 className="font-open-sans font-semibold text-gray-800">На автомобиле</h4>
                           <p className="font-open-sans text-sm text-gray-600 mt-1">
-                            Время в пути от центра Геленджика: ~20 минут<br />
+                            Время в пути от центра Новороссийска: ~15 минут<br />
                             Парковка на территории: бесплатная
                           </p>
                         </div>
