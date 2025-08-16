@@ -7,6 +7,7 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Textarea } from '@/components/ui/textarea';
 import { Separator } from '@/components/ui/separator';
 import Icon from '@/components/ui/icon';
+import { sendToTelegram } from '@/utils/telegramBot';
 
 const RSVPSection: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -19,10 +20,41 @@ const RSVPSection: React.FC = () => {
     other: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('RSVP Data:', formData);
-    alert('Спасибо за ответ! Мы получили ваше подтверждение.');
+    
+    // Показываем индикатор загрузки
+    const submitButton = e.currentTarget.querySelector('button[type="submit"]') as HTMLButtonElement;
+    const originalText = submitButton.textContent;
+    submitButton.disabled = true;
+    submitButton.textContent = 'Отправляется...';
+    
+    try {
+      const success = await sendToTelegram(formData);
+      
+      if (success) {
+        alert('Спасибо за ответ! Мы получили ваше подтверждение.');
+        // Очищаем форму после успешной отправки
+        setFormData({
+          fullName: '',
+          partnerName: '',
+          attending: '',
+          alcohol: '',
+          food: '',
+          transport: '',
+          other: ''
+        });
+      } else {
+        alert('Произошла ошибка при отправке. Пожалуйста, попробуйте позже или свяжитесь с нами по телефону.');
+      }
+    } catch (error) {
+      console.error('Ошибка при отправке формы:', error);
+      alert('Произошла ошибка при отправке. Пожалуйста, попробуйте позже или свяжитесь с нами по телефону.');
+    } finally {
+      // Возвращаем кнопку в исходное состояние
+      submitButton.disabled = false;
+      submitButton.textContent = originalText;
+    }
   };
 
   return (
