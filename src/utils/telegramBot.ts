@@ -13,6 +13,8 @@ export const sendToTelegram = async (formData: RSVPData): Promise<boolean> => {
   const BOT_TOKEN = '8269231695:AAELEbX34FJM8gLy68-cNUUx6PSHNNptr5A'; // Получите от @BotFather
   const CHAT_ID = '-1002901823317'; // ID чата или канала
   
+  console.log('Отправляем данные в Telegram:', { BOT_TOKEN: BOT_TOKEN.substring(0, 10) + '...', CHAT_ID });
+  
   const message = `🎉 НОВОЕ ПОДТВЕРЖДЕНИЕ НА СВАДЬБУ 🎉
 
 👤 ФИО: ${formData.fullName}
@@ -38,11 +40,14 @@ export const sendToTelegram = async (formData: RSVPData): Promise<boolean> => {
       })
     });
 
+    const responseData = await response.text();
+    console.log('Ответ от Telegram API:', responseData);
+    
     if (response.ok) {
       console.log('Сообщение успешно отправлено в Telegram');
       return true;
     } else {
-      console.error('Ошибка отправки в Telegram:', await response.text());
+      console.error('Ошибка отправки в Telegram:', responseData);
       return false;
     }
   } catch (error) {
