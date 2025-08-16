@@ -106,6 +106,40 @@ const Index = () => {
                   <div className="font-cormorant text-4xl font-bold text-wedding-blue mb-2">3 октября 2025</div>
                   <div className="font-open-sans text-lg text-gray-600">Пятница</div>
                 </div>
+                
+                {/* October Calendar */}
+                <div className="mt-6">
+                  <h4 className="font-cormorant text-xl font-semibold text-center text-gray-800 mb-4">Октябрь 2025</h4>
+                  <div className="grid grid-cols-7 gap-1 max-w-xs mx-auto">
+                    {/* Week days header */}
+                    {['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'].map((day) => (
+                      <div key={day} className="text-center p-2 font-open-sans text-xs font-semibold text-gray-500">
+                        {day}
+                      </div>
+                    ))}
+                    
+                    {/* Calendar days */}
+                    {Array.from({ length: 31 }, (_, i) => {
+                      const day = i + 1;
+                      const dayOfWeek = new Date(2025, 9, day).getDay();
+                      const adjustedDayOfWeek = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
+                      
+                      return (
+                        <div
+                          key={day}
+                          className={`text-center p-2 font-open-sans text-sm rounded-lg transition-all ${
+                            day === 3
+                              ? 'bg-wedding-blue text-white font-bold ring-2 ring-wedding-pink shadow-lg transform scale-110'
+                              : 'text-gray-700 hover:bg-gray-100'
+                          }`}
+                          style={day === 1 ? { gridColumnStart: adjustedDayOfWeek + 1 } : {}}
+                        >
+                          {day}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
             </CardContent>
           </Card>
@@ -123,8 +157,8 @@ const Index = () => {
                 <div>
                   <h3 className="font-cormorant text-xl font-semibold text-gray-800">Durso Tower</h3>
                   <p className="font-open-sans text-gray-600">
-                    Южнобережная ул., 15<br />
-                    СНТ Форум, хутор Дюрсо
+                    г. Новороссийск, хутор Дюрсо<br />
+                    СНТ Форум, Южнобережная ул., 15
                   </p>
                 </div>
                 
@@ -232,7 +266,8 @@ const Index = () => {
                           <h4 className="font-open-sans font-semibold text-gray-800">Нужна помощь?</h4>
                           <p className="font-open-sans text-sm text-gray-600 mt-1">
                             Если потерялись или нужна помощь с дорогой:<br />
-                            <span className="font-medium">+7 (xxx) xxx-xx-xx</span>
+                            Елизавета: <span className="font-medium">8 964 898-98-66</span><br />
+                            Константин: <span className="font-medium">+7 961 519-16-51</span>
                           </p>
                         </div>
                       </div>
@@ -514,11 +549,28 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="flex justify-center items-center gap-4 text-wedding-blue">
-            <Icon name="Phone" size={20} />
-            <span className="font-open-sans">+7 (xxx) xxx-xx-xx</span>
-            <Icon name="Mail" size={20} />
-            <span className="font-open-sans">wedding@example.com</span>
+          <div className="flex flex-col gap-4 text-wedding-blue">
+            <div className="text-center">
+              <h4 className="font-cormorant text-xl font-semibold text-gray-800 mb-3">Контакты</h4>
+              
+              <div className="space-y-2">
+                <div className="flex justify-center items-center gap-2">
+                  <Icon name="Phone" size={18} />
+                  <span className="font-open-sans font-medium">Елизавета:</span>
+                  <a href="tel:89648989866" className="font-open-sans text-wedding-blue hover:underline">
+                    8 964 898-98-66
+                  </a>
+                </div>
+                
+                <div className="flex justify-center items-center gap-2">
+                  <Icon name="Phone" size={18} />
+                  <span className="font-open-sans font-medium">Константин:</span>
+                  <a href="tel:+79615191651" className="font-open-sans text-wedding-blue hover:underline">
+                    +7 961 519-16-51
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
