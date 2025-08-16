@@ -162,9 +162,21 @@ const Index = () => {
                   </p>
                 </div>
                 
+                {/* Venue Photo */}
+                <div className="mt-4">
+                  <img 
+                    src="https://cdn.poehali.dev/files/5ab587cb-f6e5-40b2-9c40-178dc937c057.jpeg"
+                    alt="Durso Tower - место проведения свадьбы"
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                  />
+                  <p className="font-open-sans text-xs text-gray-500 mt-2 text-center">
+                    Durso Tower - ваше место для незабываемого праздника
+                  </p>
+                </div>
+                
                 <div className="space-y-3">
                   <Button 
-                    onClick={() => window.open('https://yandex.ru/maps/?text=44.684685,37.564024&z=16', '_blank')}
+                    onClick={() => window.open('https://yandex.ru/maps/?text=44.681852,37.567536&z=16', '_blank')}
                     className="w-full bg-wedding-pink hover:bg-wedding-pink/90 text-white font-open-sans"
                   >
                     <Icon name="Navigation" className="mr-2" size={16} />
@@ -172,7 +184,7 @@ const Index = () => {
                   </Button>
                   
                   <Button 
-                    onClick={() => window.open('https://maps.google.com/?q=44.684685,37.564024', '_blank')}
+                    onClick={() => window.open('https://maps.google.com/?q=44.681852,37.567536', '_blank')}
                     variant="outline"
                     className="w-full border-wedding-pink text-wedding-pink hover:bg-wedding-pink/10 font-open-sans"
                   >
@@ -199,7 +211,7 @@ const Index = () => {
               <div className="space-y-4">
                 <div className="relative w-full h-80 rounded-xl overflow-hidden shadow-lg">
                   <iframe
-                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A44.684685%2C37.564024&amp;source=constructor"
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A44.681852%2C37.567536&amp;source=constructor"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -210,7 +222,7 @@ const Index = () => {
                 
                 <div className="grid grid-cols-2 gap-3">
                   <Button 
-                    onClick={() => window.open('https://yandex.ru/maps/?text=44.684685,37.564024&z=16', '_blank')}
+                    onClick={() => window.open('https://yandex.ru/maps/?text=44.681852,37.567536&z=16', '_blank')}
                     className="bg-wedding-blue hover:bg-wedding-blue/90 text-white font-open-sans"
                   >
                     <Icon name="Navigation" className="mr-2" size={16} />
@@ -218,7 +230,7 @@ const Index = () => {
                   </Button>
                   
                   <Button 
-                    onClick={() => window.open('https://maps.google.com/?q=44.684685,37.564024', '_blank')}
+                    onClick={() => window.open('https://maps.google.com/?q=44.681852,37.567536', '_blank')}
                     variant="outline"
                     className="border-wedding-pink text-wedding-pink hover:bg-wedding-pink/10 font-open-sans"
                   >
